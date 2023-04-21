@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    # going with this instead of released movies since all of these movies have been released, sort of pointless
+    @movies = Movie.huge_success
   end
 
   def show
