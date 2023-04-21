@@ -1,0 +1,7 @@
+-@events.each do |event| 
+  %section.event
+    .summary
+      %h2= link_to event.name, event
+      %h3= "#{day_and_time(event)} in #{event.location}"
+      %span.price= price(event)
+      %p= truncate(event.description, length: 35, separator: ' ')

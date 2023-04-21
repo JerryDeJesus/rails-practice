@@ -1,0 +1,9 @@
+%section.event-details
+  .details
+    %h1= @event.name
+    %h2= price(@event)
+    %h3= "#{day_and_time(@event)} in #{@event.location}"
+    %p= @event.description
+
+%section.admin
+  = link_to "Edit", edit_event_path(@event), class: "button"
